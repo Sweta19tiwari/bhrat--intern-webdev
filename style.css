@@ -1,314 +1,286 @@
-@import url("https//fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap");
-* {
+*{
     margin: 0;
     padding: 0;
+    font-family: 'poppins',sans-serif;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
 }
 body{
-    color: #081b29;
-    color:#ededed;
-
+    background: #000;
+    color: #fff;
 }
-
-.header {
-    postion: fixed;
-    top: 0;
-    left: 0;
+.header{
     width: 100%;
-    padding: 20px 10%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-
-}
-
-.logo {
-    position: relative;
-    font-size: 25px;
-    color: #00abf0;
-    text-decoration: none;
-    font-weight: 600;
-
-
-}
-
-.logo::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 1s ease forwards;
-    animation-delay: .4s;
-}
-.navbar a{
-    font-size: 18px;
-    color: #081b29;
-    text-decoration: none;
-    font-weight:500;
-    margin-left: 35px;
-    transition: 3s;
-}
-
-.navbar a:hover,
-.navbar a.active{
-    color: #00abf0;
-}
-
-.home{
-    height: 100vh; 
-    background: url(InShot_20240209_094811788.jpg) no-repeat;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url(images/header-image.png);
     background-size: cover;
     background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+nav{
     display: flex;
     align-items: center;
-    padding: 0 10%;
-}
-
-.home-content h1 {
-    position: relative;
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 1.2;
-    
-
-}  
-
-.home-content h1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 1s ease forwards;
-    animation-delay: 1s;
-}
-
-.home-content h3{
-    position: relative;
-    font-size: 32px;
-    font-weight: 700;
-    color: #00abf0;
-}
-
-.home-content h3::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 1s ease forwards;
-    animation-delay: 1.3s;
-}
-
-.home-content p{
-    position: relative;
-    font-size: 16px;
-    margin: 20px 0 40px;
-}
-
-.home-content p::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 1s ease forwards;
-    animation-delay: 1.6s;
-}
-
-
-.home-content .btn-box{
-    position: relative;
-    display: flex;
     justify-content: space-between;
-    width: 345px;
-    height: 50px;
+    padding: 10px 0%;
 }
-
-.home-content .btn-box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 1s ease forwards;
-    animation-delay: 1.9s;
-    z-index: 2;
-}
-
-.btn-box a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+.logo{
     width: 150px;
-    height: 100%;
-    background: #00abf0;
-    border: 2px solid #00abf0;
-    border-radius: 8px;
-    font-size: 19px;
-    color: #081b29;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-
-
+    cursor: pointer;
 }
-
-.btn-box a:hover {
-    color: #00abf0;
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
 }
-
-
-
-
-.btn-box a:nth-child(2) {
-    background:transparent;
-    color: #00abf0;
-}
-
-.btn-box a:nth-child(2):hover{
-    color: #081b29;
-}
-
-.btn-box a:nth-child(2)::before {
-    background: #00abf0;
-}
-
-.btn-box a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #081b29;
-    z-index: -1;
-    transition: .5s;
-    
-}
-
-.btn-box a:hover::before {
-    width: 100%;
-}
- .home-sci {
-    position: absolute;
-    bottom: 48px;
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
- }
-
- .home-sci::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 1s ease forwards;
-    animation-delay: 2.5s;
-    z-index: 2;
-}
-
- .home-sci a{
-    position: relative;
+.language-btn{
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
     background: transparent;
-    border: 2px solid #00abf0;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #00abf0;
-    text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
- }
-
- .home-sci a:hover {
-    color:#081b29;
- }
-
- .home-sci a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #00abf0;
-    z-index: -1;
-    transition: .5s;
-
- }
- .home-sci a:hover::before {
-    width: 100%;
- }
- .home-imghover {
-    position: absolute;
-    top: 0;
-    right: 30px;
-    width: 500px;
-    height: 100%;
-    background: transparent;
-    transition: 3s;
-    animation: manipAcativehover .1s forwards;
-    animation-delay: 4s;
-    pointer-events: none;
- }
-
- .home-imghover:hover{
-    background: #081b29;
-    opacity: .8s;
- }
-
- 
-
- 
- home-imghover::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 120%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 1s ease forwards;
-    animation-delay: 3s;
-    z-index: 100;
+    border: 1px solid #fff;
+    padding: 7px 10px;
 }
-/*KEYFRAMES SHOWRIGHT*/
- @keyframes showRight {
-    100% {
-        width: 0;
-    }
- }
- @keyframes manipActivehover{
-    100%{
-        pointer-events: auto;
-    }
- }
- 
+.language-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content h1{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.email-signup{
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.email-signup input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+
+
+}
+.email-signup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.features h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+/*________________________________________faq___________________________*/
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+
+}
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+.accordian{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordian li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordian li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordian .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordian input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+
+}
+.accordian input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .email-signup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+
+}
+.faq small{
+    font-size: 13px;
+}
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer .language-btn{
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+.copyright-text{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+/*__________for the small device_____________________*/
+@media only screen and (max-width: 600px){
+  .logo{
+    width: 100px;
+  }
+   nav button{
+    padding: 5px 10px;
+   }
+   nav .language-btn{
+    padding: 4px 8px;
+
+   }
+   .header-content{
+    position: unset;
+    transform: none;
+    padding-top: 150px;
+   }
+   .header-content h1{
+    font-size: 30px;
+
+
+   }
+   .email-signup button{
+    font-size: 12px;
+    padding: 10px 15px;
+
+   }
+   .text-col, .img-col{
+    flex-basis: 100%;
+   }
+   .features h2{
+    font-size: 30px;
+   }
+   .features p{
+    font-size: 15px;
+   }
+   .row:nth-child(2), .row:nth-child(4){
+    flex-direction: column-reverse;
+   }
+   .features .row{
+    padding: 10px 0;
+   }
+   .faq h2{
+    font-size: 20px;
+
+   }
+   .accordian .content{
+    font-size: 14px;
+   }
+   .accordian li label{
+    padding: 10px;
+    font-size: 14px;
+   }
+   label::after{
+    font-size: 22px;
+   }
+}
+    
 
